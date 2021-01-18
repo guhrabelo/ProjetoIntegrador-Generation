@@ -11,7 +11,7 @@ CREATE TABLE `Produto` (
 	`Nome_Produto` varchar(150) NOT NULL,
 	`Preco` DECIMAL(6,2) NOT NULL,
 	`Qtd_Estoque` bigint(3) NOT NULL,
-	`Imagem` varchar(3000) NOT NULL,
+	`Imagem` varchar(2000) NOT NULL,
 	`Categoria_Id` bigint(5) NOT NULL,
 	PRIMARY KEY (`Id_Produto`)
 );
