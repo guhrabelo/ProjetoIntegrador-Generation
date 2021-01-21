@@ -1,3 +1,4 @@
 # ProjetoIntegrador-Generation
-Integrantes: Daniel Filho, Danilo Pereira da Silva, Marcos Gomes
+Grupo 02 - Generation Turma 14
+Integrantes: Daniel Filho, Danilo Pereira da Silva, Luiz Felipe Magalhães, Marcos Gomes
 
