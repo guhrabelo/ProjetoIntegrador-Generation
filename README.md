@@ -1,4 +1,4 @@
-<h2>ProjetoIntegrador-Generation</h2>
+<h3>ProjetoIntegrador-Generation</h3>
 
 Grupo 02 - Generation Turma 14
 <br/> Integrantes: Daniel Filho, Danilo Pereira da Silva, Luiz Felipe Magalhães, Marcos Gomes, Gustavo Rabelo Teles
