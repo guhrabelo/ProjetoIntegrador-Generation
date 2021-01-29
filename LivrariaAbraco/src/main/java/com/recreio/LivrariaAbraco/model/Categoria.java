@@ -1,5 +1,6 @@
 package com.recreio.LivrariaAbraco.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,47 +10,58 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "categoria")
-
+@Table(name = "tb_categoria")
 public class Categoria {
 	
+	//Atributos e Anotações:
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id_Categoria;
+	@Column (name = "idCategoria")
+	private long idCategoria;
 	
 	@NotNull 
 	@Size(min = 8,max = 30)
-	private String nome;
+	@Column (name = "genero")
+	private String genero;
 	
 	@NotNull 
 	@Size(min = 4,max = 30)
-	private String tema;
+	@Column (name = "assunto")
+	private String assunto;
 	
 	@NotNull 
 	@Size(min = 4,max = 30)
 	private String nacionalidade;
-	
-	public long getId_Categoria() {
-		return id_Categoria;
+
+	//Getters and Setters:
+	public long getIdCategoria() {
+		return idCategoria;
 	}
-	public void setId_Categoria(long id_Categoria) {
-		this.id_Categoria = id_Categoria;
+
+	public void setIdCategoria(long idCategoria) {
+		this.idCategoria = idCategoria;
 	}
-	public String getNome() {
-		return nome;
+
+	public String getGenero() {
+		return genero;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setGenero(String genero) {
+		this.genero = genero;
 	}
-	public String getTema() {
-		return tema;
+
+	public String getAssunto() {
+		return assunto;
 	}
-	public void setTema(String tema) {
-		this.tema = tema;
+
+	public void setAssunto(String assunto) {
+		this.assunto = assunto;
 	}
+
 	public String getNacionalidade() {
 		return nacionalidade;
 	}
+
 	public void setNacionalidade(String nacionalidade) {
 		this.nacionalidade = nacionalidade;
 	}
