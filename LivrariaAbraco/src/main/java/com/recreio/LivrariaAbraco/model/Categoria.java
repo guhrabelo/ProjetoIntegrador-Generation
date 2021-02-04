@@ -22,8 +22,8 @@ public class Categoria {
 	//Atributos e Anotações:
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column (name = "id")
-	private long idCategoria;
+	@Column (name = "idCategoria")
+	private long id;
 	
 	@NotNull 
 	@Size(min = 8,max = 30)
@@ -46,12 +46,12 @@ public class Categoria {
 
 
 	//Getters and Setters:
-	public long getIdCategoria() {
-		return idCategoria;
+	public long getId() {
+		return id;
 	}
 
-	public void setIdCategoria(long idCategoria) {
-		this.idCategoria = idCategoria;
+	public void setId(long idCategoria) {
+		this.id = idCategoria;
 	}
 
 	public String getGenero() {

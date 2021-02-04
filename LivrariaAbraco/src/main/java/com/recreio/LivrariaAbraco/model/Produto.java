@@ -26,7 +26,7 @@ public class Produto
 	private long id;
 	
 	@NotNull 
-	@Size(min = 8,max = 150)
+	@Size(min = 3,max = 150)
 	@Column (name = "nomeProduto")
 	private String nome;
 	
@@ -41,7 +41,7 @@ public class Produto
 	private long quantidade;
 	
 	@NotNull 
-	@Size(min = 4,max = 2000)
+	@Size(min = 3,max = 2000)
 	private String imagem;
 	
 	@ManyToOne

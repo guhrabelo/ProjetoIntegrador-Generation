@@ -8,9 +8,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
-
-
-
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario 
@@ -21,14 +18,15 @@ public class Usuario
 	private String nome;
 	
 	@Id
+	@NotNull
 	@Column(name = "email")
 	private String email;
 	
 	@NotNull
-	@Size(min = 5, max = 16)
+	//@Size(min = 5, max = 16)
 	private String senha;
 	
-	//--------------------------------------------
+	
 	public String getNome() {
 		return nome;
 	}
