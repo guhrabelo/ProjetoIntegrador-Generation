@@ -23,7 +23,7 @@ public class Usuario
 	private String email;
 	
 	@NotNull
-	//@Size(min = 5, max = 16)
+	//@Size(min = 5, max = 50)
 	private String senha;
 	
 	
