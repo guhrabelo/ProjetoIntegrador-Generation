@@ -27,9 +27,9 @@ public class Usuario
 	private String email;
 	
 	@NotNull
-	//@Size(min = 5, max = 50)
 	private String senha;
 	
+	@NotNull
 	private String tipo;
 	
 	
