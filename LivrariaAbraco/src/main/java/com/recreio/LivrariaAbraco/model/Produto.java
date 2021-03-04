@@ -30,6 +30,9 @@ public class Produto
 	@Column (name = "nomeProduto")
 	private String nome;
 	
+	@NotNull
+	private String autor;
+	
 	@NotNull 
 	@Digits(integer = 4, fraction = 2)
 	@Min(1)
@@ -42,6 +45,7 @@ public class Produto
 	
 	@NotNull 
 	private String imagem;
+	
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -61,6 +65,14 @@ public class Produto
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}	
+	
+	public String getAutor() {
+		return autor;
+	}
+
+	public void setAutor(String autor) {
+		this.autor = autor;
 	}
 
 	public BigDecimal getPreco() {
