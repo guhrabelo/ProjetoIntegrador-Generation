@@ -39,7 +39,7 @@ public class Categoria {
 	@Size(min = 4,max = 30)
 	private String nacionalidade;*/
 	
-	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
 	private List<Produto> produto;
 	
