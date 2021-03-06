@@ -26,6 +26,7 @@ public class ProdutoController
 	@Autowired
 	private ProdutoRepository repositorioProduto;
 	
+	
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll()
 	{
@@ -39,10 +40,11 @@ public class ProdutoController
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping ("/livro/{nomeProduto}")
+	@GetMapping ("/livro/{nome}")
 	public ResponseEntity<List<Produto>> getByNome (@PathVariable String nome) {
 		return ResponseEntity.ok(repositorioProduto.findAllByNomeContainingIgnoreCase(nome));
 	}
+	
 	
 	@PostMapping
 	public ResponseEntity<Produto> post (@RequestBody Produto produto) {
