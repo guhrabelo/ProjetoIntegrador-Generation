@@ -7,9 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import com.recreio.LivrariaAbraco.model.Categoria;
 
+
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long>
 {
 	public List<Categoria> findAllByGeneroContainingIgnoreCase(String genero);
+	
 	
 }

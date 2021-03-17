@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.recreio.LivrariaAbraco.Repository.ProdutoRepository;
 import com.recreio.LivrariaAbraco.model.Produto;
 
@@ -25,6 +24,7 @@ public class ProdutoController
 {
 	@Autowired
 	private ProdutoRepository repositorioProduto;
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Produto>> getAll()
@@ -39,9 +39,14 @@ public class ProdutoController
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping ("/livro/{nomeProduto}")
+	@GetMapping ("/livro/{nome}")
 	public ResponseEntity<List<Produto>> getByNome (@PathVariable String nome) {
 		return ResponseEntity.ok(repositorioProduto.findAllByNomeContainingIgnoreCase(nome));
+	}
+	
+	@GetMapping("/categoria/{genero}")
+	public ResponseEntity<List<Produto>> getByGenero (@PathVariable String genero){
+		return ResponseEntity.ok(repositorioProduto.findProdutoByCategoriaGenero(genero));
 	}
 	
 	@PostMapping

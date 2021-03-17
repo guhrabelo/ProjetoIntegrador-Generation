@@ -26,7 +26,7 @@ public class Categoria {
 	private long id;
 	
 	@NotNull 
-	@Size(min = 8,max = 30)
+	@Size(min = 4,max = 30)
 	@Column (name = "genero")
 	private String genero;
 	
@@ -35,23 +35,21 @@ public class Categoria {
 	@Column (name = "assunto")
 	private String assunto;
 	
-	@NotNull 
+	/*@NotNull 
 	@Size(min = 4,max = 30)
-	private String nacionalidade;
+	private String nacionalidade;*/
 	
-	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categoria")
-	private List<Produto> produto; 
-
-
-
+	private List<Produto> produto;
+	
 	//Getters and Setters:
 	public long getId() {
 		return id;
 	}
 
-	public void setId(long idCategoria) {
-		this.id = idCategoria;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getGenero() {
@@ -70,13 +68,13 @@ public class Categoria {
 		this.assunto = assunto;
 	}
 
-	public String getNacionalidade() {
+	/*public String getNacionalidade() {
 		return nacionalidade;
 	}
 
 	public void setNacionalidade(String nacionalidade) {
 		this.nacionalidade = nacionalidade;
-	}
+	}*/
 
 	public List<Produto> getProduto() {
 		return produto;
@@ -84,8 +82,7 @@ public class Categoria {
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
-	}
-	
+	} 
 
 }
 
